@@ -32,7 +32,7 @@ namespace STORYGAME
             AddExperience = 100,
             GoToShop = 1000,
             GoToNextStory = 2000,
-            GoToRandomStory = 3000,
+            GotoRandomStory = 3000,
             GoToEnding = 10000
         }
     }
@@ -48,12 +48,13 @@ namespace STORYGAME
         public int currentSpPoint;
         public int currentXpPoint;
 
-        //±âº» ½ºÅÃ ¼³Á¤ (Ex D&D)
-        public int strength;
-        public int dexterity;
-        public int consitiution;
-        public int Intelligence;
-        public int wisdom;
-        public int charisma;
+        //±âº» ½ºÅÝ ¼³Á¤ (Ex D&D)
+        public int strength;        //STR Èû
+        public int dexterity;       //DEX ¹ÎÃ¸
+        public int consitiution;    //CON °Ç°­
+        public int Intelligence;    //INT Áö´É
+        public int wisdom;          //WIS ÁöÇý
+        public int charisma;        //CHA ¸Å·Â 
     }
 }
+

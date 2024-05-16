@@ -17,7 +17,7 @@ public class Entity_monster : ScriptableObject
 	public class Param
 	{
 		
-		public int Index;
+		public int index;
 		public int hp;
 		public int mp;
 		public string name;
