@@ -8,9 +8,9 @@ using NPOI.XSSF.UserModel;
 using NPOI.SS.UserModel;
 
 public class MonsterData_importer : AssetPostprocessor {
-	private static readonly string filePath = "Assets/Resources/Excel/MonsterData.xlsx";
-	private static readonly string exportPath = "Assets/Resources/Excel/MonsterData.asset";
-	private static readonly string[] sheetNames = { "monster", };
+	private static readonly string filePath = "Assets/Excel/MonsterData.xlsx";
+	private static readonly string exportPath = "Assets/Data/MonsterData.asset";
+	private static readonly string[] sheetNames = { "Sheet1", };
 	
 	static void OnPostprocessAllAssets (string[] importedAssets, string[] deletedAssets, string[] movedAssets, string[] movedFromAssetPaths)
 	{
@@ -50,7 +50,7 @@ public class MonsterData_importer : AssetPostprocessor {
 						
 						Entity_monster.Param p = new Entity_monster.Param ();
 						
-					cell = row.GetCell(0); p.index = (int)(cell == null ? 0 : cell.NumericCellValue);
+					cell = row.GetCell(0); p.Index = (int)(cell == null ? 0 : cell.NumericCellValue);
 					cell = row.GetCell(1); p.hp = (int)(cell == null ? 0 : cell.NumericCellValue);
 					cell = row.GetCell(2); p.mp = (int)(cell == null ? 0 : cell.NumericCellValue);
 					cell = row.GetCell(3); p.name = (cell == null ? "" : cell.StringCellValue);
